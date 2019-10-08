@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="shortcut icon" href="images/favicon.ico">
     <link href="css/love.css" type="text/css" rel="stylesheet">
+    <link href="http://cdn.staticfile.org/emoji/0.2.2/emoji.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
+	
 </head>
      <script type="text/javascript"  >
 		 var myDate = new Date();//获取系统当前时间
@@ -76,9 +78,16 @@
 		<div id="words" style="position: absolute; top: 455px; left: 629.5px;display: none;">
 				<div id="messages" style="opacity: 0.92467; display: block;">
 					We fell in love
-					<div id="elapseClock"><span class="digit">10000000</span> days <span class="digit">01</span> hours <span class="digit">08</span> minutes <span class="digit">49</span> seconds</div>
+					<div id="elapseClock1"><span class="digit">10000000</span> days <span class="digit">01</span> hours <span class="digit">08</span> minutes <span class="digit">49</span> seconds</div>
 				</div>
 		</div>
+		<div id="words" style="position: absolute; top: 608px; left: 629.5px;">
+				<div id="sadmessages" style="opacity: 0.92467; display: block;">
+					 2019年10月4日,被父母发现了,10月7日 你家人从我身边带走了你<span id="sadEmoj">😭😭😭</span>
+					<div id="elapseClock2"></div>
+				</div>
+		</div>
+	    <div id="haha">🍐🐶🍐😎⛎🕢👐🔔</div>
 		<!--
         	作者：刘康
         	时间：2018-06-28
@@ -94,7 +103,12 @@
         	  没啥才艺,反正你在我心里,来过并且跑不掉啦。
         -->
         <script type="text/javascript" src="js/love.js" >
-		
 		</script>
+		 <script src="http://cdn.staticfile.org/emoji/0.2.2/emoji.js"></script>
+		<script>
+    var $text = $('#haha');
+    var html = $text.html().trim().replace(/\n/g, '<br/>');
+    $text.html(jEmoji.unifiedToHTML(html));
+  </script>
 </body>
 </html>

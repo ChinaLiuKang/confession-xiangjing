@@ -9,8 +9,19 @@ together.setMilliseconds(0);
 //每隔1秒重新加载时间
 timeElapse(together);
 	setInterval(function () {
-		timeElapse(together);
+		timeElapse(together,1);
 	}, 1000);
+	//短暂离别时间
+	setInterval(function () {
+		var sad = new Date();
+		sad.setFullYear(2019, 9, 04);
+		sad.setHours(23);
+		sad.setMinutes(59);
+		sad.setSeconds(59);
+		sad.setMilliseconds(0);
+		timeElapse(sad,2);
+	}, 1000);
+	
     //想要放的屁  哈哈哈
     var S = {
         init: function () {

@@ -82,7 +82,7 @@ function startHeartAnimation() {
 	};
 })(jQuery);
 
-function timeElapse(date){
+function timeElapse(date,type){
 	var current = Date();
 	var seconds = (Date.parse(current) - Date.parse(date)) / 1000;
 	var days = Math.floor(seconds / (3600 * 24));
@@ -101,12 +101,15 @@ function timeElapse(date){
 		seconds = "0" + seconds;
 	}
 	var result = "<span class=\"digit\">" + days + "</span> days <span class=\"digit\">" + hours + "</span> hours <span class=\"digit\">" + minutes + "</span> minutes <span class=\"digit\">" + seconds + "</span> seconds"; 
-	$("#elapseClock").html(result);
+	$("#elapseClock"+type).html(result);
 }
 
 function showMessages() {
 	adjustWordsPosition();
 	$('#messages').fadeIn(5000, function() {
+		showLoveU();
+	});
+	$('#sadmessages').fadeIn(5000, function() {
 		showLoveU();
 	});
 }
@@ -115,6 +118,9 @@ function adjustWordsPosition() {
 	$('#words').css("position", "absolute");
 	$('#words').css("top", $("#garden").position().top + 195);
 	$('#words').css("left", $("#garden").position().left + 70);
+	$('#words2').css("position", "absolute");
+	$('#words2').css("top", $("#garden2").position().top + 195);
+	$('#words2').css("left", $("#garden2").position().left + 70);
 }
 
 function adjustCodePosition() {
